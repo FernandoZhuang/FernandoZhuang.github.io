@@ -335,7 +335,7 @@ crossorigin="anonymous"></script>
 </div>
 <div class="card-text">
   <p id='text-post-summary'>BackGround
-Win10更行崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。
+Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。
  
 GNS3
 Route
@@ -367,7 +367,7 @@ Router...</p>
     </div>
     <div class='article-content'>
     <h2 id="background">BackGround</h2>
-<p>Win10更行崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。</p>
+<p>Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。</p>
 <a id="more"></a> 
 <h2 id="gns3">GNS3</h2>
 <h3 id="route">Route</h3>
@@ -394,6 +394,9 @@ Router...</p>
 </ol>
 <h3 id="vtp">Vtp</h3>
 <h4 id="concept-v2">Concept</h4>
+<blockquote>
+<p><a href="https://www.jannet.hk/zh-Hans/post/vlan-trunking-protocol-vtp/" target="_blank" rel="noopener">Vtp介绍</a></p>
+</blockquote>
 <ol>
 <li>Vtp是什么，怎么样：同步Vlan信息。</li>
 <li>Server模式增删改查Vlan；Client模式不能；Transparent模式不修订版本，但会转发通告。</li>
@@ -408,8 +411,10 @@ Router...</p>
 </ol>
 <h3 id="error">Error</h3>
 <ol>
-<li>==现象==：不能自动补全，有<code>^</code>报错提醒。==可能原因==：是否进错模式，是普通模式，还是特权模式，还是配置模式等；是接口，设备本身的配置错误？比如fastethernet0模块不能适用于数据链路层。</li>
-<li>远程登录时，目标主机得先login，然后登陆主机telenet 才能得到目标主机响应。</li>
+<li>现象：不能自动补全，有<code>^</code>报错提醒。可能原因：是否进错模式，是普通模式，还是特权模式，还是配置模式等；是接口，设备本身的配置错误？比如fastethernet0模块不能适用于数据链路层。</li>
+<li>现象：远程登录时，目标主机无相应。可取做法：目标主机得先login，然后登陆主机telenet 才能得到目标主机响应。</li>
+<li>现象：接口绑定增加带宽，某接口显示Down。背景：设备已在工作，此时再添加设备间的新接口连线。例如再添加Trunk，和已有Trunk绑定增加带宽。可取做法：组成新添加Trunk的接口得Shutdown，再No shutdown，把物理和协议状态都开启。</li>
+<li></li>
 </ol>
 
     
@@ -553,7 +558,7 @@ Router...</p>
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').update('hashit_5474757d4d6cbed817a8d090b3efa9ddf701c156dd2537b7668072607e647c88', function(){});
+    new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').update('hashit_5b6bf470c6728939baef22fc67e100a0789eb6e22eeae800c25658a40d81579d', function(){});
   });
   
 </script>
