@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>BabyLearnGNS3 - 式</title>
+  
+
+  
+  
+  <meta name="description" content="">
+  <meta name="author" content="FernandoZhuang">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+ 
+
+  <!-- load font awesome 5 -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/head.jpg' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">式</a>
+			</h1>
+			<subtitle>
+				知行合一
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#BackGround"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GNS3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Route"><span class="toc-number">2.1.</span> <span class="toc-text">Route</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Do"><span class="toc-number">2.1.1.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Concept"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Do-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Concept-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Do-2"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Error"><span class="toc-number">2.4.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+	</div>
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='归档'>
+			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='搜索'>
+			<img src="/images/icons/colorful-outlined/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/colorful-outlined/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+
+
+
+
+	
+	
+	
+	
+
+
+
+    
+        
+            
+            
+        
+    
+        
+    
+
+
+
+
+
+
+    
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2018/06/19/BabyLearnGNS3/" data-name='BabyLearnGNS3' data-version="">
+
+    <!-- Title -->
+    <div class='article-header'>
+         
+         <h1 class='article-title'>
+            <a href="/2018/06/19/BabyLearnGNS3/">
+                BabyLearnGNS3
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+        <ul class='article-categories'>
+            
+            
+                <li><a href="/categories/Network/" data-no-instant>
+                    <img src="/images/Network.svg" alt="Network" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='Network'/>
+                </a></li>
+            
+            
+                <li><a href="/categories/Network/BabyLearn/" data-no-instant>
+                    <img src="/images/BabyLearn.svg" alt="BabyLearn" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='BabyLearn'/>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class='article-meta'>
+    <ul>
+            <li><i class='fa fa-calendar'></i> 2018年06月19日</li>
+            
+            <li><i class="fa fa-user"></i> FernandoZhuang</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                
+                    
+                
+                <a href=https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh>CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
+<div class="tags">
+	
+		
+			<label class='tag-1'><a href="/tags/GNS3/">Gns3</a></label>
+		
+	
+	</div>
+
+    </div>
+    <div class='article-cards'>
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                FernandoZhuang
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
+</div>
+<div class="card-chart">
+  <div id='chart-post-visit'></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
+</div>
+<div class="card-text">
+  <p id='text-post-summary'>BackGroundWin10更行崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。 
+GNS3RouteDo
+拖拽Router,配置接口。Route每个接口应不相同。
+配置Router Gateway的ip：进入Config模式，ip add ipAddress ipMask，再输入No shutdown启用Ip。
+配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip address。
+Router...</p>
+</div>
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id='article-toc'>
+        
+
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#BackGround"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GNS3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Route"><span class="toc-number">2.1.</span> <span class="toc-text">Route</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Do"><span class="toc-number">2.1.1.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Concept"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Do-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Concept-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Do-2"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Error"><span class="toc-number">2.4.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+    </div>
+    <div class='article-content'>
+    <h2 id="BackGround"><a href="#BackGround" class="headerlink" title="BackGround"></a>BackGround</h2><p>Win10更行崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。<br><a id="more"></a> </p>
+<h2 id="GNS3"><a href="#GNS3" class="headerlink" title="GNS3"></a>GNS3</h2><h3 id="Route"><a href="#Route" class="headerlink" title="Route"></a>Route</h3><h4 id="Do"><a href="#Do" class="headerlink" title="Do"></a>Do</h4><ol>
+<li>拖拽Router,配置接口。Route每个接口应不相同。</li>
+<li>配置Router Gateway的ip：进入Config模式，ip add ipAddress ipMask，再输入No shutdown启用Ip。</li>
+<li>配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip address。</li>
+<li>Router Pc间Ping测试。</li>
+</ol>
+<h3 id="Vlan"><a href="#Vlan" class="headerlink" title="Vlan"></a>Vlan</h3><h4 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h4><blockquote>
+<p><a href="https://wizardforcel.gitbooks.io/network-basic/content/2.html" target="_blank" rel="noopener">Vlan介绍</a></p>
+</blockquote>
+<h4 id="Do-1"><a href="#Do-1" class="headerlink" title="Do"></a>Do</h4><p><img src="https://i.loli.net/2018/06/20/5b2a18d39d136.png" alt="Vlan绑定.PNG"></p>
+<ol>
+<li>拖拽VPCS，交换机等，配置接口。注意：交换机不能使用0号模块，因0号模块工作在网络层，Vlan则处理数据链路层。</li>
+<li>交换机配置Vlan。注意：交换机的默认Vlan应保持相同。</li>
+<li>不同Vlan间通信，要么使用路由器，要么选用Trunk，本次实验使用Trunk。Vlan相连的接口处，配置Trunk。</li>
+<li>VPCS接口配置Access模式，配置Ip。</li>
+<li>Vpcs间的ping测试。</li>
+</ol>
+<h3 id="Vtp"><a href="#Vtp" class="headerlink" title="Vtp"></a>Vtp</h3><h4 id="Concept-1"><a href="#Concept-1" class="headerlink" title="Concept"></a>Concept</h4><ol>
+<li>Vtp是什么，怎么样：同步Vlan信息。</li>
+<li>Server模式增删改查Vlan；Client模式不能；Transparent模式不修订版本，但会转发通告。</li>
+<li>“学习”是什么：低版本向高版本学习，类比软件更新。“通告”，“学习”并不是间隔固定时间发生，而是先检查各个交换机版本是否相同，不同才“学习”。学习顺序按照交换机通告先后顺序，先被“通告”先“学习”，直至版本相同。注意：即使版本相同，交换机间的Vlan信息仍可能不同步，思考角度是“学习”的定义。</li>
+</ol>
+<h4 id="Do-2"><a href="#Do-2" class="headerlink" title="Do"></a>Do</h4><p><img src="https://i.loli.net/2018/06/20/5b2a1924997cf.png" alt="Vtp三模式.PNG"></p>
+<ol>
+<li>拖拽EtherSwitch Router,配置接口。</li>
+<li>配置相同域名，配置中继连接都为Trunk，密码保持相同。</li>
+<li>Server增删改查Vlan，测试。</li>
+</ol>
+<h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><ol>
+<li>==现象==：不能自动补全，有<code>^</code>报错提醒。==可能原因==：是否进错模式，是普通模式，还是特权模式，还是配置模式等；是接口，设备本身的配置错误？比如fastethernet0模块不能适用于数据链路层。 </li>
+<li>远程登录时，目标主机得先login，然后登陆主机telenet 才能得到目标主机响应。</li>
+</ol>
+
+    
+    </div>
+    
+    
+        <div class="article-comment" id='article-comment'>
+            
+
+<h1>评论</h1>
+
+  
+  
+  
+    <div id="comment-not-available">
+      Not available
+      <p><strong>For site maintainer: </strong>Please provide <code>id</code>, <code>uid</code> in your <code>_data/cutie.yml</code> file for <code>livere</code> comment system.</p>
+    </div>
+  
+
+
+        </div>
+        
+</article>
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018</p>
+            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://0xshare.me">Cutie 2.0.13-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+            
+                
+                    <div class='footer-social-item'><a href='https://github.com/FernandoZhuang' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#BackGround"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GNS3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Route"><span class="toc-number">2.1.</span> <span class="toc-text">Route</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Do"><span class="toc-number">2.1.1.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Concept"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Do-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Concept-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Do-2"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Error"><span class="toc-number">2.4.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+	</div>
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='归档'>
+			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='搜索'>
+			<img src="/images/icons/colorful-outlined/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/colorful-outlined/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    <!-- 来必力City版安装代码 -->
+
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').update('hashit_178019048a370e7dbbef42b00e3b580219ea3e79b313ab7b1794a0374c70920d', function(){});
+  });
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
+// });
+
+// 
+</script>
+
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

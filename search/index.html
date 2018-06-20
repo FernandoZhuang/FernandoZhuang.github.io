@@ -71,9 +71,6 @@ crossorigin="anonymous"></script>
 
   <!-- include comment system code -->
   
-    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -114,7 +111,7 @@ crossorigin="anonymous"></script>
 				<div class='nav-icon'>
 				
 			<a href="/archives/" title='归档'>
-			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
 			</a>
 		</div>
 	</div>
@@ -123,18 +120,34 @@ crossorigin="anonymous"></script>
 		<div class='nav-icon active_dot'>
 		
 			<a href="/search/" title='搜索'>
-			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			<img src="/images/icons/colorful-outlined/search.svg" alt="">
 			</a>
 		</div>
 	</div>
 	<div class="nav-item" id='nav-item-more'>
 		<div class="nav-icon">
 				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
-				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				<img src="/images/icons/colorful-outlined/menu.svg" alt="">
 				</a>
 		</div>
 		<div class="nav-more-menu">
 		
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
 		
 	</div>
 	</div>
@@ -155,6 +168,10 @@ crossorigin="anonymous"></script>
 	<input type="text" id='search-form'>
 
 	<ul class="cat-list">
+		
+			<li><a href="/categories/Network/"><img src="/images/Network.svg" alt="Network" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='Network'></a></li>
+		
+			<li><a href="/categories/BabyLearn/"><img src="/images/BabyLearn.svg" alt="BabyLearn" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='BabyLearn'></a></li>
 		
 	</ul>
 
@@ -191,7 +208,7 @@ crossorigin="anonymous"></script>
 			"tags"
 		]
 	};
-	var s = '[{"title":"Hello World","date":"2018-06-19T00:18:36.616Z","content":"Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.\nQuick StartCreate a new post1$ hexo new My New Post\nMore info: Writing\nRun server1$ hexo server\nMore info: Server\nGenerate static files1$ hexo generate\nMore info: Generating\nDeploy to remote sites1$ hexo deploy\nMore info: Deployment\n","tags":[],"path":"2018/06/19/hello-world/","external_link":""}]';
+	var s = '[{"title":"BabyLearnGNS3","date":"2018-06-19T13:01:40.618Z","content":"BackGroundWin10更行崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。 \nGNS3RouteDo\n拖拽Router,配置接口。Route每个接口应不相同。\n配置Router Gateway的ip：进入Config模式，ip add ipAddress ipMask，再输入No shutdown启用Ip。\n配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip address。\nRouter Pc间Ping测试。\n\nVlanConcept\nVlan介绍\n\nDo\n\n拖拽VPCS，交换机等，配置接口。注意：交换机不能使用0号模块，因0号模块工作在网络层，Vlan则处理数据链路层。\n交换机配置Vlan。注意：交换机的默认Vlan应保持相同。\n不同Vlan间通信，要么使用路由器，要么选用Trunk，本次实验使用Trunk。Vlan相连的接口处，配置Trunk。\nVPCS接口配置Access模式，配置Ip。\nVpcs间的ping测试。\n\nVtpConcept\nVtp是什么，怎么样：同步Vlan信息。\nServer模式增删改查Vlan；Client模式不能；Transparent模式不修订版本，但会转发通告。\n“学习”是什么：低版本向高版本学习，类比软件更新。“通告”，“学习”并不是间隔固定时间发生，而是先检查各个交换机版本是否相同，不同才“学习”。学习顺序按照交换机通告先后顺序，先被“通告”先“学习”，直至版本相同。注意：即使版本相同，交换机间的Vlan信息仍可能不同步，思考角度是“学习”的定义。\n\nDo\n\n拖拽EtherSwitch Router,配置接口。\n配置相同域名，配置中继连接都为Trunk，密码保持相同。\nServer增删改查Vlan，测试。\n\nError\n==现象==：不能自动补全，有^报错提醒。==可能原因==：是否进错模式，是普通模式，还是特权模式，还是配置模式等；是接口，设备本身的配置错误？比如fastethernet0模块不能适用于数据链路层。 \n远程登录时，目标主机得先login，然后登陆主机telenet 才能得到目标主机响应。\n\n","tags":["GNS3"],"path":"2018/06/19/BabyLearnGNS3/","external_link":""}]';
 	s = s.replace(/\\n/g, "\\n")
                .replace(/\\'/g, "\\'")
                .replace(/\\"/g, '\\"')
@@ -230,7 +247,7 @@ crossorigin="anonymous"></script>
 
 <div class='tagcloud-container'>
 <div class='tag-cloud'>
-	
+	<a href="/tags/GNS3/" style="font-size: 0.8em; color: #488baf">GNS3</a>
 </div>
 </div>
 
@@ -273,7 +290,7 @@ crossorigin="anonymous"></script>
 				<div class='nav-icon'>
 				
 			<a href="/archives/" title='归档'>
-			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
 			</a>
 		</div>
 	</div>
@@ -282,18 +299,34 @@ crossorigin="anonymous"></script>
 		<div class='nav-icon active_dot'>
 		
 			<a href="/search/" title='搜索'>
-			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			<img src="/images/icons/colorful-outlined/search.svg" alt="">
 			</a>
 		</div>
 	</div>
 	<div class="nav-item" id='nav-item-more'>
 		<div class="nav-icon">
 				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
-				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				<img src="/images/icons/colorful-outlined/menu.svg" alt="">
 				</a>
 		</div>
 		<div class="nav-more-menu">
 		
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
 		
 	</div>
 	</div>
@@ -305,9 +338,24 @@ crossorigin="anonymous"></script>
 
 
 
-    
+    <!-- 来必力City版安装代码 -->
 
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
 
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
+</div>
+<!-- City版安装代码已完成 -->
 
 
 
