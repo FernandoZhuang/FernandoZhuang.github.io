@@ -143,6 +143,30 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
+					<a class='nav-link' href="/categories/Web/">
+						<span>Web</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
 					<a class='nav-link' href="/categories/BabyLearn/">
 						<span>Babylearn</span>
 					</a>
@@ -307,6 +331,30 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
+					<a class='nav-link' href="/categories/Web/">
+						<span>Web</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
 					<a class='nav-link' href="/categories/BabyLearn/">
 						<span>Babylearn</span>
 					</a>
@@ -359,7 +407,7 @@ crossorigin="anonymous"></script>
           
           // show/hide post unread badage
           var postLinks = document.querySelectorAll('#hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58 .Card-title a, #hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58 .Card-excerpt a, #hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58 .Card-figure a');
-          new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').showUnreadNotification('hashit_5b6bf470c6728939baef22fc67e100a0789eb6e22eeae800c25658a40d81579d', function(){
+          new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').showUnreadNotification('hashit_4f0ae7fe21cdbb706732251ee1fa348a5b183f22ea9f74ad117f22b31ad29c24', function(){
             console.log('show badge for 2018/06/19/BabyLearnGNS3/ : hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58');
             var postBadge = document.querySelector('#hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58 mark.Card-badge');
             $(postBadge).fadeIn();
@@ -371,7 +419,7 @@ crossorigin="anonymous"></script>
           // update cookie upon click the post and hide badge immediately
           for(var i = 0;i < postLinks.length; i++){
             postLinks[i].onclick = function(){
-              new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').update('hashit_5b6bf470c6728939baef22fc67e100a0789eb6e22eeae800c25658a40d81579d', function(){
+              new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').update('hashit_4f0ae7fe21cdbb706732251ee1fa348a5b183f22ea9f74ad117f22b31ad29c24', function(){
                 console.log('called');
                 var postBadge = document.querySelector('#hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58 mark.Card-badge');
                 $(postBadge).fadeOut();

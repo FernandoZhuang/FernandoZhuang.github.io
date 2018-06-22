@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>BabyLearnXss - 式</title>
+  
+
+  
+  
+  <meta name="description" content="">
+  <meta name="author" content="FernandoZhuang">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+ 
+
+  <!-- load font awesome 5 -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/head.jpg' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">式</a>
+			</h1>
+			<subtitle>
+				知行合一
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reflected-cross-site-scripting"><span class="toc-number">1.</span> <span class="toc-text">Reflected Cross-Site Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#persistent-cross-site-scripting"><span class="toc-number">2.</span> <span class="toc-text">Persistent Cross-SIte Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom"><span class="toc-number">3.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+	</div>
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='归档'>
+			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='搜索'>
+			<img src="/images/icons/colorful-outlined/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/colorful-outlined/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Web/">
+						<span>Web</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+
+
+
+
+	
+	
+	
+	
+
+
+
+    
+        
+            
+            
+        
+    
+        
+    
+        
+    
+
+
+
+
+
+
+    
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2018/06/21/BabyLearnXss/" data-name='BabyLearnXss' data-version="">
+
+    <!-- Title -->
+    <div class='article-header'>
+         
+         <h1 class='article-title'>
+            <a href="/2018/06/21/BabyLearnXss/">
+                BabyLearnXss
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+        <ul class='article-categories'>
+            
+            
+                <li><a href="/categories/Web/" data-no-instant>
+                    <img src="/images/Web.svg" alt="Web" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='Web'/>
+                </a></li>
+            
+            
+                <li><a href="/categories/Web/Security/" data-no-instant>
+                    <img src="/images/Security.svg" alt="Security" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='Security'/>
+                </a></li>
+            
+            
+                <li><a href="/categories/Web/Security/BabyLearn/" data-no-instant>
+                    <img src="/images/BabyLearn.svg" alt="BabyLearn" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='BabyLearn'/>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class='article-meta'>
+    <ul>
+            <li><i class='fa fa-calendar'></i> 2018年06月21日</li>
+            
+            <li><i class="fa fa-user"></i> FernandoZhuang</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                
+                    
+                
+                <a href=https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh>CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
+<div class="tags">
+	
+		
+			<label class='tag-1'><a href="/tags/Xss/">Xss</a></label>
+		
+	
+	</div>
+
+    </div>
+    <div class='article-cards'>
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                FernandoZhuang
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
+</div>
+<div class="card-chart">
+  <div id='chart-post-visit'></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
+</div>
+<div class="card-text">
+  <p id='text-post-summary'>Reflected Cross-Site Scripting
+
+定义：攻击者通过特定手法（如电子邮件），诱使用户访问包含恶意代码的 URL。当受害者点击专门设计的链接时，恶意代码直接在受害者主机上的浏览器执行[1]。
+特点：通常出现在网站的搜索栏、用户登录口等地方[1]。
+
+TagElement
+			1....</p>
+</div>
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id='article-toc'>
+        
+
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reflected-cross-site-scripting"><span class="toc-number">1.</span> <span class="toc-text">Reflected Cross-Site Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#persistent-cross-site-scripting"><span class="toc-number">2.</span> <span class="toc-text">Persistent Cross-SIte Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom"><span class="toc-number">3.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+    </div>
+    <div class='article-content'>
+    <h2 id="reflected-cross-site-scripting">Reflected Cross-Site Scripting</h2>
+<blockquote>
+<p>定义：攻击者通过特定手法（如电子邮件），诱使用户访问包含恶意代码的 URL。当受害者点击专门设计的链接时<a id="more"></a>，恶意代码直接在受害者主机上的浏览器执行<sup>[1]</sup>。
+特点：通常出现在网站的搜索栏、用户登录口等地方<sup>[1]</sup>。</p>
+</blockquote>
+<p><code>TagElement</code>
+			1. <script src="https://gist.github.com/FernandoZhuang/329bcdcdf58798c19f96879ca7b98a78.js"></script></p>
+<p><code>Tag</code>
+			1.<script src="https://gist.github.com/FernandoZhuang/109bc88d4f640365c1c37225603c20a9.js"></script>
+			2.引号转义不能被闭合，含有Javascript，直接执行代码。
+			<script src="https://gist.github.com/FernandoZhuang/daafc0257a09e0d44b2443b667551533.js"></script>
+			3.引号转义不能被闭合，查看网页是否以中文编码。如是，则以0xdf等和反斜杠结合编码，达到闭合引号。
+			4.标签属性外
+			<script src="https://gist.github.com/FernandoZhuang/ff415e1fdea8aaf4b27e14e424425d3c.js"></script></p>
+<p><code>Javascript</code>
+			1.闭合引号，基础弹框。
+			<script src="https://gist.github.com/FernandoZhuang/ecf12c310efe62ac1d479e45217a0c96.js"></script>
+			2.引号被过滤
+			<script src="https://gist.github.com/FernandoZhuang/dcfbf60bca0123ff3d9d19a314118497.js"></script></p>
+<h2 id="persistent-cross-site-scripting">Persistent Cross-SIte Scripting</h2>
+<blockquote>
+<p>定义：攻击者事先将恶意代码上传或储存到漏洞服务器，受害者浏览包含此恶意代码的页面，就会执行恶意代码<sup>[1]</sup>。
+特点：一般出现在网站留言、评论、博客日志等交互处<sup>[1]</sup>。</p>
+</blockquote>
+<p>利用构想，上传恶意代码，该恶意代码的功能是能获取Referer字段。作用是当管理员浏览用户头像时，会自动向构造的Refer.php发送请求，如此可以得到管理员的后台。</p>
+<h2 id="dom">DOM</h2>
+<blockquote>
+<p>定义：浏览器用户可以操纵 DOM 中的一些对象，例如 URL、location 等。用户在客户端输入的数据若包含恶意 JavaScript 脚本，而脚本未经适当过滤，那么应用程序可能受到基于 DOM 的 XSS 攻击<sup>[1]</sup>。
+特点：执行恶意代码的操作未经服务器。</p>
+</blockquote>
+<h2 id="reference">Reference</h2>
+<p>1: <a href="https://ctf-wiki.github.io/ctf-wiki/web/xss/" target="_blank" rel="noopener">https://ctf-wiki.github.io/ctf-wiki/web/xss/</a></p>
+
+    
+    </div>
+    
+    
+        <div class="article-comment" id='article-comment'>
+            
+
+<h1>评论</h1>
+
+
+        </div>
+        
+</article>
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018</p>
+            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://0xshare.me">Cutie 2.0.13-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+            
+                
+                    <div class='footer-social-item'><a href='https://github.com/FernandoZhuang' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reflected-cross-site-scripting"><span class="toc-number">1.</span> <span class="toc-text">Reflected Cross-Site Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#persistent-cross-site-scripting"><span class="toc-number">2.</span> <span class="toc-text">Persistent Cross-SIte Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom"><span class="toc-number">3.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+	</div>
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='归档'>
+			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='搜索'>
+			<img src="/images/icons/colorful-outlined/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/colorful-outlined/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Web/">
+						<span>Web</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').update('hashit_823ecb202fc51d7cff77109842b322a9f844c67ab17791b8f1ae3441c6bcea6a', function(){});
+  });
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
+// });
+
+// 
+</script>
+
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
