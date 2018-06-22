@@ -135,14 +135,6 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Network/">
-						<span>Network</span>
-					</a>
-				</div>
-		</div>
-		
-		<div class='nav-more-item'>
-				<div class="nav-name">
 					<a class='nav-link' href="/categories/Web/">
 						<span>Web</span>
 					</a>
@@ -151,8 +143,8 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/BabyLearn/">
-						<span>Babylearn</span>
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
 					</a>
 				</div>
 		</div>
@@ -161,6 +153,14 @@ crossorigin="anonymous"></script>
 				<div class="nav-name">
 					<a class='nav-link' href="/categories/Security/">
 						<span>Security</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
 					</a>
 				</div>
 		</div>
@@ -233,6 +233,15 @@ crossorigin="anonymous"></script>
 						</a>
 					</li>
 					
+					
+					<li>
+						<a href="/2018/06/21/BabyLearnXss/#article-comment">
+							<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-eye"></i> <span class='card-visit-count'>0</span>
+					</li>
 					
 					
 			</ul>
@@ -323,14 +332,6 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Network/">
-						<span>Network</span>
-					</a>
-				</div>
-		</div>
-		
-		<div class='nav-more-item'>
-				<div class="nav-name">
 					<a class='nav-link' href="/categories/Web/">
 						<span>Web</span>
 					</a>
@@ -339,8 +340,8 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/BabyLearn/">
-						<span>Babylearn</span>
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
 					</a>
 				</div>
 		</div>
@@ -349,6 +350,14 @@ crossorigin="anonymous"></script>
 				<div class="nav-name">
 					<a class='nav-link' href="/categories/Security/">
 						<span>Security</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
 					</a>
 				</div>
 		</div>
@@ -434,6 +443,34 @@ crossorigin="anonymous"></script>
 </script>
 
 
+    <script type="text/javascript" src="https://l2.io/ip.js?var=user_ip"></script>
+<script type='text/javascript'>
+  
+    loadjs(['', '', '/js/leancloud.js'], 'post-visit-comment-count');
+    loadjs.ready('post-visit-comment-count', {
+      success: function(){
+          LeanCloud.init('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
+          var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchCommentCount('/2018/06/21/BabyLearnXss/');
+          leanCloud.fetchVisitCount('/2018/06/21/BabyLearnXss/');
+          leanCloud.getCommentCount('/2018/06/21/BabyLearnXss/', function(count){
+              var el = document.querySelector('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2018/06/21/BabyLearnXss/', function(count){
+              var el = document.querySelector('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+        
+      }
+    })
+  
+</script>
+
 
 <!-- <script src="/js/post.js"></script> -->
 
@@ -446,7 +483,7 @@ initHeadroom();
 changeLayoutOnTouchScreen();
 
 // 
-// var post = new Post('', '');
+// var post = new Post('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
 // $('.Card-archive').each(function(){
 //     var post_url = $(this).attr('id');
 //     var true_url = $(this).find('.Card-title a').first().attr('href');
