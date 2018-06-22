@@ -135,14 +135,6 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Web/">
-						<span>Web</span>
-					</a>
-				</div>
-		</div>
-		
-		<div class='nav-more-item'>
-				<div class="nav-name">
 					<a class='nav-link' href="/categories/Network/">
 						<span>Network</span>
 					</a>
@@ -151,16 +143,24 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Security/">
-						<span>Security</span>
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
 					</a>
 				</div>
 		</div>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/BabyLearn/">
-						<span>Babylearn</span>
+					<a class='nav-link' href="/categories/Web/">
+						<span>Web</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
 					</a>
 				</div>
 		</div>
@@ -479,14 +479,6 @@ Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Web/">
-						<span>Web</span>
-					</a>
-				</div>
-		</div>
-		
-		<div class='nav-more-item'>
-				<div class="nav-name">
 					<a class='nav-link' href="/categories/Network/">
 						<span>Network</span>
 					</a>
@@ -495,16 +487,24 @@ Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Security/">
-						<span>Security</span>
+					<a class='nav-link' href="/categories/BabyLearn/">
+						<span>Babylearn</span>
 					</a>
 				</div>
 		</div>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/BabyLearn/">
-						<span>Babylearn</span>
+					<a class='nav-link' href="/categories/Web/">
+						<span>Web</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class='nav-more-item'>
+				<div class="nav-name">
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
 					</a>
 				</div>
 		</div>
@@ -563,7 +563,7 @@ Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失
           
           // show/hide post unread badage
           var postLinks = document.querySelectorAll('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .Card-title a, #hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .Card-excerpt a, #hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .Card-figure a');
-          new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').showUnreadNotification('hashit_823ecb202fc51d7cff77109842b322a9f844c67ab17791b8f1ae3441c6bcea6a', function(){
+          new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').showUnreadNotification('hashit_634a68754d98bd732f61483248b8dbefc74e3cd91d417e489d80e528656832ac', function(){
             console.log('show badge for 2018/06/21/BabyLearnXss/ : hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a');
             var postBadge = document.querySelector('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a mark.Card-badge');
             $(postBadge).fadeIn();
@@ -575,7 +575,7 @@ Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失
           // update cookie upon click the post and hide badge immediately
           for(var i = 0;i < postLinks.length; i++){
             postLinks[i].onclick = function(){
-              new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').update('hashit_823ecb202fc51d7cff77109842b322a9f844c67ab17791b8f1ae3441c6bcea6a', function(){
+              new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').update('hashit_634a68754d98bd732f61483248b8dbefc74e3cd91d417e489d80e528656832ac', function(){
                 console.log('called');
                 var postBadge = document.querySelector('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a mark.Card-badge');
                 $(postBadge).fadeOut();
