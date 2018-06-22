@@ -71,6 +71,9 @@ crossorigin="anonymous"></script>
 
   <!-- include comment system code -->
   
+    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -281,6 +284,9 @@ crossorigin="anonymous"></script>
     <ul>
             <li><i class='fa fa-calendar'></i> 2018年06月19日</li>
             
+            <li><i class='fa fa-comments'></i> <a href='#article-comment'><span id='article-comment-count'>0</span></a></li>
+            <li><i class="fa fa-eye"></i> <span id='article-visit-count'>0</span></li>
+            
             <li><i class="fa fa-user"></i> FernandoZhuang</li>
             <li><i class="fas fa-copyright"></i>
             
@@ -464,6 +470,10 @@ Router...</p>
 
 <h1>评论</h1>
 
+  
+    <div id='valine'></div>
+  
+
 
         </div>
         
@@ -590,6 +600,27 @@ Router...</p>
 
 
 
+    
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz',
+        appKey: 'EJjXthAbB5sJV4MJfNbRcHYq',
+        placeholder: 'What's your opinion🎈',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'zh-cn'
+    });
+</script>
+
+
+
+
 
 
 
@@ -626,6 +657,31 @@ Router...</p>
 </script>
 
 
+    <script type="text/javascript" src="https://l2.io/ip.js?var=user_ip"></script>
+<script type='text/javascript'>
+  
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+  loadjs.ready('post-visit-comment-count', function(){
+    
+    
+    LeanCloud.init('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
+    var leanCloud = LeanCloud.getInstance();
+    leanCloud.addVisitRecord('/2018/06/19/BabyLearnGNS3/', user_ip);
+    leanCloud.fetchCommentCount('/2018/06/19/BabyLearnGNS3/');
+    leanCloud.fetchVisitCount('/2018/06/19/BabyLearnGNS3/');
+    leanCloud.getCommentCount('/2018/06/19/BabyLearnGNS3/', function(count){
+        var el = document.querySelector('#article-comment-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getVisitCount('/2018/06/19/BabyLearnGNS3/', function(count){
+        var el = document.querySelector('#article-visit-count');
+        if(el) el.innerHTML = count;
+    });
+  });
+  
+</script>
+
 
 <!-- <script src="/js/post.js"></script> -->
 
@@ -638,7 +694,7 @@ initHeadroom();
 changeLayoutOnTouchScreen();
 
 // 
-// var post = new Post('', '');
+// var post = new Post('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
 // post.getCommentCount(window.location.pathname, function(count){
 //     $('#article-comment-count').text(count);
 // });
