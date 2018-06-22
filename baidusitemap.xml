@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>www.0xshare.me/2018/06/19/BabyLearnGNS3/</loc>
+    <lastmod>2018-06-22T11:47:02.778Z</lastmod>
+    <data>
+        <display>
+        <title>BabyLearnGNS3</title>
+        <pubTime>2018-06-19T13:01:40.618Z</pubTime>
+        
+        <tag>GNS3</tag>
+         
+         
+           
+             
+              <breadCrumb title="Network" url="www.0xshare.me/categories/Network/"/>
+          
+             
+              <breadCrumb title="BabyLearn" url="www.0xshare.me/categories/Network/BabyLearn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>www.0xshare.me/2018/06/21/BabyLearnXss/</loc>
+    <lastmod>2018-06-22T11:46:56.377Z</lastmod>
+    <data>
+        <display>
+        <title>BabyLearnXss</title>
+        <pubTime>2018-06-21T13:55:49.281Z</pubTime>
+        
+        <tag>Xss</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="www.0xshare.me/categories/Web/"/>
+          
+             
+              <breadCrumb title="Security" url="www.0xshare.me/categories/Web/Security/"/>
+          
+             
+              <breadCrumb title="BabyLearn" url="www.0xshare.me/categories/Web/Security/BabyLearn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
