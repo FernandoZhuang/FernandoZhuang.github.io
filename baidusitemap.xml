@@ -5,7 +5,7 @@
     
   <url>
     <loc>www.0xshare.me/2018/06/19/BabyLearnGNS3/</loc>
-    <lastmod>2018-06-22T11:47:02.778Z</lastmod>
+    <lastmod>2018-06-23T01:07:34.915Z</lastmod>
     <data>
         <display>
         <title>BabyLearnGNS3</title>
@@ -13,13 +13,12 @@
         
         <tag>GNS3</tag>
          
+        <tag>BabyLearn</tag>
+         
          
            
              
               <breadCrumb title="Network" url="www.0xshare.me/categories/Network/"/>
-          
-             
-              <breadCrumb title="BabyLearn" url="www.0xshare.me/categories/Network/BabyLearn/"/>
           
         </display>
     </data>
@@ -28,24 +27,22 @@
     
   <url>
     <loc>www.0xshare.me/2018/06/21/BabyLearnXss/</loc>
-    <lastmod>2018-06-22T11:46:56.377Z</lastmod>
+    <lastmod>2018-06-23T01:07:00.391Z</lastmod>
     <data>
         <display>
         <title>BabyLearnXss</title>
         <pubTime>2018-06-21T13:55:49.281Z</pubTime>
         
+        <tag>BabyLearn</tag>
+         
+        <tag>Web</tag>
+         
         <tag>Xss</tag>
          
          
            
              
-              <breadCrumb title="Web" url="www.0xshare.me/categories/Web/"/>
-          
-             
-              <breadCrumb title="Security" url="www.0xshare.me/categories/Web/Security/"/>
-          
-             
-              <breadCrumb title="BabyLearn" url="www.0xshare.me/categories/Web/Security/BabyLearn/"/>
+              <breadCrumb title="Security" url="www.0xshare.me/categories/Security/"/>
           
         </display>
     </data>
