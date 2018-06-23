@@ -23,13 +23,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- load loadjs.js -->
-  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+  <script src="/.js"></script>
 
 
-<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+<link rel="stylesheet" href="/.css">
   <!-- load lightgallery -->
 <link rel="stylesheet" href="/css/lightgallery.css">
-<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<link rel="stylesheet" href="/.css">
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -50,7 +50,7 @@ crossorigin="anonymous"></script>
  
 
   <!-- load font awesome 5 -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script defer src=""></script>
 
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -58,10 +58,10 @@ crossorigin="anonymous"></script>
   });
   </script>
   <!-- load mathjax -->
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/javascript" async src=""></script>
 
   <!-- load js-cookie -->
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src=""></script>
     <script src="/js/social-share.min.js"></script>
     <script src="/js/theme.js"></script>
 
@@ -70,9 +70,6 @@ crossorigin="anonymous"></script>
   
 
   <!-- include comment system code -->
-  
-    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -138,16 +135,16 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Security/">
-						<span>Security</span>
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
 					</a>
 				</div>
 		</div>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Network/">
-						<span>Network</span>
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
 					</a>
 				</div>
 		</div>
@@ -172,9 +169,9 @@ crossorigin="anonymous"></script>
 
 	<ul class="cat-list">
 		
-			<li><a href="/categories/Security/"><img src="/images/Security.svg" alt="Security" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='Security'></a></li>
-		
 			<li><a href="/categories/Network/"><img src="/images/Network.svg" alt="Network" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='Network'></a></li>
+		
+			<li><a href="/categories/Security/"><img src="/images/Security.svg" alt="Security" onerror='if(this.src != "/images/uncategorized.svg") this.src="/images/uncategorized.svg"' title='Security'></a></li>
 		
 	</ul>
 
@@ -195,7 +192,7 @@ crossorigin="anonymous"></script>
 		</div>
 </div>
 
-<script src="/libs/fuse.js/dist/fuse.min.js"></script>
+<script src="/.js"></script>
 <script>
 	var options = {
 		shouldSort: true,
@@ -211,7 +208,7 @@ crossorigin="anonymous"></script>
 			"tags"
 		]
 	};
-	var s = '[{"title":"BabyLearnXss","date":"2018-06-21T13:55:49.281Z","content":"Reflected Cross-Site Scripting\n\n定义：攻击者通过特定手法（如电子邮件），诱使用户访问包含恶意代码的 URL。当受害者点击专门设计的链接时，恶意代码直接在受害者主机上的浏览器执行[1]。\n特点：通常出现在网站的搜索栏、用户登录口等地方[1]。\n\n\n   TagElement\n   \n\n   \n   Tag\n   \n\n2. 引号转义不能被闭合，含有Javascript，直接执行代码。\n\n3.引号转义不能被闭合，查看网页是否以中文编码。如是，则以0xdf等和反斜杠结合编码，达到闭合引号。  \n4.标签属性外\n\n   \n   Javascript\n   \n1.闭合引号，基础弹框。\n\n2.引号被过滤\n\n   \n\nPersistent Cross-SIte Scripting\n\n定义：攻击者事先将恶意代码上传或储存到漏洞服务器，受害者浏览包含此恶意代码的页面，就会执行恶意代码[1]。\n特点：一般出现在网站留言、评论、博客日志等交互处[1]。\n\n利用构想，上传恶意代码，该恶意代码的功能是能获取Referer字段。作用是当管理员浏览用户头像时，会自动向构造的Refer.php发送请求，如此可以得到管理员的后台。\nDOM\n\n定义：浏览器用户可以操纵 DOM 中的一些对象，例如 URL、location 等。用户在客户端输入的数据若包含恶意 JavaScript 脚本，而脚本未经适当过滤，那么应用程序可能受到基于 DOM 的 XSS 攻击[1]。\n特点：执行恶意代码的操作未经服务器。\n\nReference\n1: https://ctf-wiki.github.io/ctf-wiki/web/xss/\n","tags":["Web","Xss","BabyLearn"],"path":"2018/06/21/BabyLearnXss/","external_link":""},{"title":"BabyLearnGNS3","date":"2018-06-19T13:01:40.618Z","content":"BackGround\nWin10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。\n \nGNS3\nRoute\nDo\n\n拖拽Router,配置接口。Route每个接口应不相同。\n配置Router Gateway的ip：进入Config模式，ip add ipAddress ipMask，再输入No shutdown启用Ip。\n配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip address。\nRouter Pc间Ping测试。\n\nVlan\nConcept\n\nVlan介绍\n\nDo\n\n\n拖拽VPCS，交换机等，配置接口。注意：交换机不能使用0号模块，因0号模块工作在网络层，Vlan则处理数据链路层。\n交换机配置Vlan。注意：交换机的默认Vlan应保持相同。\n不同Vlan间通信，要么使用路由器，要么选用Trunk，本次实验使用Trunk。Vlan相连的接口处，配置Trunk。\nVPCS接口配置Access模式，配置Ip。\nVpcs间的ping测试。\n\nVtp\nConcept\n\nVtp介绍\n\n\nVtp是什么，怎么样：同步Vlan信息。\nServer模式增删改查Vlan；Client模式不能；Transparent模式不修订版本，但会转发通告。\n“学习”是什么：低版本向高版本学习，类比软件更新。“通告”，“学习”并不是间隔固定时间发生，而是先检查各个交换机版本是否相同，不同才“学习”。学习顺序按照交换机通告先后顺序，先被“通告”先“学习”，直至版本相同。注意：即使版本相同，交换机间的Vlan信息仍可能不同步，思考角度是“学习”的定义。\n\nDo\n\n\n拖拽EtherSwitch Router,配置接口。\n配置相同域名，配置中继连接都为Trunk，密码保持相同。\nServer增删改查Vlan，测试。\n\nRouter On a Stick\nCross Different Vlan\nSingle L3 Switch\n\n\nL3 Switch分配两个不同Vlan和两个虚拟网关(基于Vlan)；L2 Switch不分配网关，分配一个Vlan。\nL3 Switch和L2 Switch间采用Trunk连接，用户设备和交换机间采用Access连接。\n注意：开启ip routing。\n\nDouble L3 Switch\n\n\n左L3 Switch和右L3 Switch都分配两个Vlan和两个虚拟网关。\n目的是确保Switc能找到另一个网段的网关。\n\nError\n\n现象：不能自动补全，有^报错提醒。可能原因：是否进错模式，是普通模式，还是特权模式，还是配置模式等；是接口，设备本身的配置错误？比如fastethernet0模块不能适用于数据链路层。\n现象：远程登录时，目标主机无相应。可取做法：目标主机得先login，然后登陆主机telenet 才能得到目标主机响应。\n现象：接口绑定增加带宽，某接口显示Down。背景：设备已在工作，此时再添加设备间的新接口连线。例如再添加Trunk，和已有Trunk绑定增加带宽。可取做法：组成新添加Trunk的接口得Shutdown，再No shutdown，把物理和协议状态都开启。\n\n","tags":["BabyLearn","GNS3"],"path":"2018/06/19/BabyLearnGNS3/","external_link":""}]';
+	var s = '[{"title":"BabyLearnGNS3","date":"2018-06-19T13:01:40.618Z","content":"BackGround\nWin10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。\n \nGNS3\nRoute\nDo\n\n拖拽Router,配置接口。Route每个接口应不相同。\n配置Router Gateway的ip：进入Config模式，ip add ipAddress ipMask，再输入No shutdown启用Ip。\n配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip address。\nRouter Pc间Ping测试。\n\nVlan\nConcept\n\nVlan介绍\n\nDo\n\n\n拖拽VPCS，交换机等，配置接口。注意：交换机不能使用0号模块，因0号模块工作在网络层，Vlan则处理数据链路层。\n交换机配置Vlan。注意：交换机的默认Vlan应保持相同。\n不同Vlan间通信，要么使用路由器，要么选用Trunk，本次实验使用Trunk。Vlan相连的接口处，配置Trunk。\nVPCS接口配置Access模式，配置Ip。\nVpcs间的ping测试。\n\nVtp\nConcept\n\nVtp介绍\n\n\nVtp是什么，怎么样：同步Vlan信息。\nServer模式增删改查Vlan；Client模式不能；Transparent模式不修订版本，但会转发通告。\n“学习”是什么：低版本向高版本学习，类比软件更新。“通告”，“学习”并不是间隔固定时间发生，而是先检查各个交换机版本是否相同，不同才“学习”。学习顺序按照交换机通告先后顺序，先被“通告”先“学习”，直至版本相同。注意：即使版本相同，交换机间的Vlan信息仍可能不同步，思考角度是“学习”的定义。\n\nDo\n\n\n拖拽EtherSwitch Router,配置接口。\n配置相同域名，配置中继连接都为Trunk，密码保持相同。\nServer增删改查Vlan，测试。\n\nRouter On a Stick\nCross Different Vlan\nSingle L3 Switch\n\n\nL3 Switch分配两个不同Vlan和两个虚拟网关(基于Vlan)；L2 Switch不分配网关，分配一个Vlan。\nL3 Switch和L2 Switch间采用Trunk连接，用户设备和交换机间采用Access连接。\n注意：开启ip routing。\n\nDouble L3 Switch\n\n\n左L3 Switch和右L3 Switch都分配两个Vlan和两个虚拟网关。\n目的是确保Switc能找到另一个网段的网关。\n\nError\n\n现象：不能自动补全，有^报错提醒。可能原因：是否进错模式，是普通模式，还是特权模式，还是配置模式等；是接口，设备本身的配置错误？比如fastethernet0模块不能适用于数据链路层。\n现象：远程登录时，目标主机无相应。可取做法：目标主机得先login，然后登陆主机telenet 才能得到目标主机响应。\n现象：接口绑定增加带宽，某接口显示Down。背景：设备已在工作，此时再添加设备间的新接口连线。例如再添加Trunk，和已有Trunk绑定增加带宽。可取做法：组成新添加Trunk的接口得Shutdown，再No shutdown，把物理和协议状态都开启。\n\n","tags":["GNS3","BabyLearn"],"path":"2018/06/19/BabyLearnGNS3/","external_link":""},{"title":"BabyLearnXss","date":"2018-06-21T13:55:49.281Z","content":"Reflected Cross-Site Scripting\n\n定义：攻击者通过特定手法（如电子邮件），诱使用户访问包含恶意代码的 URL。当受害者点击专门设计的链接时，恶意代码直接在受害者主机上的浏览器执行[1]。\n特点：通常出现在网站的搜索栏、用户登录口等地方[1]。\n\n\n   TagElement\n   \n\n   \n   Tag\n   \n\n2. 引号转义不能被闭合，含有Javascript，直接执行代码。\n\n3.引号转义不能被闭合，查看网页是否以中文编码。如是，则以0xdf等和反斜杠结合编码，达到闭合引号。  \n4.标签属性外\n\n   \n   Javascript\n   \n1.闭合引号，基础弹框。\n\n2.引号被过滤\n\n   \n\nPersistent Cross-SIte Scripting\n\n定义：攻击者事先将恶意代码上传或储存到漏洞服务器，受害者浏览包含此恶意代码的页面，就会执行恶意代码[1]。\n特点：一般出现在网站留言、评论、博客日志等交互处[1]。\n\n利用构想，上传恶意代码，该恶意代码的功能是能获取Referer字段。作用是当管理员浏览用户头像时，会自动向构造的Refer.php发送请求，如此可以得到管理员的后台。\nDOM\n\n定义：浏览器用户可以操纵 DOM 中的一些对象，例如 URL、location 等。用户在客户端输入的数据若包含恶意 JavaScript 脚本，而脚本未经适当过滤，那么应用程序可能受到基于 DOM 的 XSS 攻击[1]。\n特点：执行恶意代码的操作未经服务器。\n\nReference\n1: https://ctf-wiki.github.io/ctf-wiki/web/xss/\n","tags":["BabyLearn","Web","Xss"],"path":"2018/06/21/BabyLearnXss/","external_link":""}]';
 	s = s.replace(/\\n/g, "\\n")
                .replace(/\\'/g, "\\'")
                .replace(/\\"/g, '\\"')
@@ -263,7 +260,7 @@ crossorigin="anonymous"></script>
         <div>
 			
             <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018 Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
-            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
+            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="www.0xshare.me">Cutie -Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
         </div>
     </div>
     
@@ -318,16 +315,16 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Security/">
-						<span>Security</span>
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
 					</a>
 				</div>
 		</div>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Network/">
-						<span>Network</span>
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
 					</a>
 				</div>
 		</div>
@@ -342,26 +339,24 @@ crossorigin="anonymous"></script>
 
 
 
-    
-    
-    
-    
-<script>
-    new Valine({
-        el: '#valine',
-        notify:false, 
-        verify:false,
-        appId: 'VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz',
-        appKey: 'EJjXthAbB5sJV4MJfNbRcHYq',
-        placeholder: 'What's your opinion🎈',
-        path:window.location.pathname, 
-        avatar:'retro',
-        lang: 'zh-cn'
-    });
+    <!-- 来必力City版安装代码 -->
+
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
 </script>
-
-
-
+<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
+</div>
+<!-- City版安装代码已完成 -->
 
 
 
