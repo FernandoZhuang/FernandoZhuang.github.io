@@ -71,9 +71,6 @@ crossorigin="anonymous"></script>
 
   <!-- include comment system code -->
   
-    <script src=""></script>
-<script src=''></script>
-  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -349,19 +346,7 @@ crossorigin="anonymous"></script>
 
    TagElement
    
-
-   
-   Tag
-   
-
-2. 引号转义不能被闭合，含有Javascript，直接执行代码。
-
-3.引号转义不能被闭合，查看网页是否以中文编码。如是，则以0xdf等和反斜杠结合编码，达到闭合引号。  
-4.标签属性外
-
-   
-   Javascript
-  ...</p>
+123&lt;!--Vulnerbility注入点 &lt;label&gt;&lt;h4&gt;  &lt;/h4&gt;&lt;/label&gt;  --&gt;&lt;!--input输入 alert(1) ...</p>
 </div>
         </div> -->
     </div>
@@ -391,23 +376,29 @@ crossorigin="anonymous"></script>
 <dl>
    <dt>TagElement</dt>
    <dd>
-<script src="https://gist.github.com/FernandoZhuang/329bcdcdf58798c19f96879ca7b98a78.js"></script>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点 &lt;label&gt;&lt;h4&gt;  &lt;/h4&gt;&lt;/label&gt;  --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--input输入 alert(1)  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>alert（1）<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
    </dd>
    <dt>Tag</dt>
    <dd>
-<script src="https://gist.github.com/FernandoZhuang/109bc88d4f640365c1c37225603c20a9.js"></script>
-2. 引号转义不能被闭合，含有Javascript，直接执行代码。
-<script src="https://gist.github.com/FernandoZhuang/daafc0257a09e0d44b2443b667551533.js"></script>
-3.引号转义不能被闭合，查看网页是否以中文编码。如是，则以0xdf等和反斜杠结合编码，达到闭合引号。  
-4.标签属性外
-<script src="https://gist.github.com/FernandoZhuang/ff415e1fdea8aaf4b27e14e424425d3c.js"></script>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点：&lt;label&gt;&lt;h4&gt;&lt;input type="text" name="test" value="1"&gt;  --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: 1" onfocus="alert(1)" autofocus="true"  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"test"</span> <span class="attr">value</span>=<span class="string">"1"</span> <span class="attr">onfocus</span>=<span class="string">"alert(1)"</span> <span class="attr">autofocus</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>引号转义不能被闭合，含有Javascript，直接执行代码。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility漏洞: &lt;label&gt;&lt;h4&gt;&lt;a href="javascript:2333\" onfocus=\"alert(1)\" autofocus=\"true"&gt;不能闭合引号&lt;/a&gt;&lt;/h4&gt;&lt;/label&gt; --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Injection输入:alert(1)--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:alert(1)"</span>&gt;</span>不能闭合引号<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>引号转义不能被闭合，查看网页是否以中文编码。如是，则以0xdf等和反斜杠结合编码，达到闭合引号。</li>
+<li>标签属性外</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点: &lt;label&gt;&lt;h4&gt;&lt;input type="text" name="test" value=""  2333" &gt; &lt;/h4&gt;&lt;/label&gt;  --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: onfocus="alert(1)" autofocus="true" --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"test"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">onfocus</span>=<span class="string">"alert(1)"</span> <span class="attr">autofocus</span>=<span class="string">"true"</span> &gt;</span> <span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
    </dd>
    <dt>Javascript</dt>
    <dd>
-1.闭合引号，基础弹框。
-<script src="https://gist.github.com/FernandoZhuang/ecf12c310efe62ac1d479e45217a0c96.js"></script>
-2.引号被过滤
-<script src="https://gist.github.com/FernandoZhuang/dcfbf60bca0123ff3d9d19a314118497.js"></script>
+1. 闭合引号，基础弹框。
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点:</span></span><br><span class="line"><span class="comment">          &lt;label&gt;&lt;h4&gt;</span></span><br><span class="line"><span class="comment">          &lt;script type="text/javascript"&gt;</span></span><br><span class="line"><span class="comment">              var you = 'iloveyou';</span></span><br><span class="line"><span class="comment">              document.write('2333''+','+you);</span></span><br><span class="line"><span class="comment">          &lt;/script&gt;</span></span><br><span class="line"><span class="comment">          &lt;/h4&gt;&lt;/label&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: 233');alert(1);//'+','+you); --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">              var you = 'iloveyou';</span></span><br><span class="line"><span class="undefined">              document.write('233');alert(1);//'+','+you);</span></span><br><span class="line"><span class="undefined">          </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>引号被过滤</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点:  输入的是2333"alert(1)</span></span><br><span class="line"><span class="comment">&lt;label&gt;&lt;h4 id="twoH4"&gt;</span></span><br><span class="line"><span class="comment">  &lt;script type="text/javascript"&gt;</span></span><br><span class="line"><span class="comment">  var two = document.getElementById('twoH4');</span></span><br><span class="line"><span class="comment">  var two_value = "2333alert(1)";</span></span><br><span class="line"><span class="comment">  two.innerHTML=two_value;</span></span><br><span class="line"><span class="comment">  &lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;/h4&gt;&lt;/label&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: &lt;/script&gt; &lt;script&gt;alert(1)&lt;/script&gt;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  var you = 'iloveyou';</span></span><br><span class="line"><span class="undefined">  document.write('</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">alert(1)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>'+','+you);</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
    </dd>
 </dl>
 <h2 id="persistent-cross-site-scripting">Persistent Cross-SIte Scripting</h2>
@@ -434,7 +425,9 @@ crossorigin="anonymous"></script>
 <h1>评论</h1>
 
   
-    <div id='valine'></div>
+  
+  
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTU1My82MTIx">
   
 
 
@@ -554,26 +547,24 @@ crossorigin="anonymous"></script>
 
 
 
-    
-    
-    
-    
-<script>
-    new Valine({
-        el: '#valine',
-        notify:false, 
-        verify:false,
-        appId: 'VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz',
-        appKey: 'EJjXthAbB5sJV4MJfNbRcHYq',
-        placeholder: 'What's your opinion🎈',
-        path:window.location.pathname, 
-        avatar:'retro',
-        lang: 'zh-cn'
-    });
+    <!-- 来必力City版安装代码 -->
+
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
 </script>
-
-
-
+<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
+</div>
+<!-- City版安装代码已完成 -->
 
 
 
@@ -605,7 +596,7 @@ crossorigin="anonymous"></script>
   loadjs(['', '', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').update('hashit_634a68754d98bd732f61483248b8dbefc74e3cd91d417e489d80e528656832ac', function(){});
+    new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').update('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){});
   });
   
 </script>

@@ -71,9 +71,6 @@ crossorigin="anonymous"></script>
 
   <!-- include comment system code -->
   
-    <script src=""></script>
-<script src=''></script>
-  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -344,26 +341,24 @@ crossorigin="anonymous"></script>
 
 
 
-    
-    
-    
-    
-<script>
-    new Valine({
-        el: '#valine',
-        notify:false, 
-        verify:false,
-        appId: 'VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz',
-        appKey: 'EJjXthAbB5sJV4MJfNbRcHYq',
-        placeholder: 'What's your opinion🎈',
-        path:window.location.pathname, 
-        avatar:'retro',
-        lang: 'zh-cn'
-    });
+    <!-- 来必力City版安装代码 -->
+
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
 </script>
-
-
-
+<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
+</div>
+<!-- City版安装代码已完成 -->
 
 
 
@@ -401,7 +396,7 @@ crossorigin="anonymous"></script>
           
           // show/hide post unread badage
           var postLinks = document.querySelectorAll('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .Card-title a, #hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .Card-excerpt a, #hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a .Card-figure a');
-          new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').showUnreadNotification('hashit_634a68754d98bd732f61483248b8dbefc74e3cd91d417e489d80e528656832ac', function(){
+          new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').showUnreadNotification('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){
             console.log('show badge for 2018/06/21/BabyLearnXss/ : hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a');
             var postBadge = document.querySelector('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a mark.Card-badge');
             $(postBadge).fadeIn();
@@ -413,7 +408,7 @@ crossorigin="anonymous"></script>
           // update cookie upon click the post and hide badge immediately
           for(var i = 0;i < postLinks.length; i++){
             postLinks[i].onclick = function(){
-              new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').update('hashit_634a68754d98bd732f61483248b8dbefc74e3cd91d417e489d80e528656832ac', function(){
+              new Postv2('hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a').update('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){
                 console.log('called');
                 var postBadge = document.querySelector('#hashit_503879d4d8baa429114ae06baa8096000a9ef34acb93b4c7616d7ecfe2902d6a mark.Card-badge');
                 $(postBadge).fadeOut();
