@@ -71,6 +71,9 @@ crossorigin="anonymous"></script>
 
   <!-- include comment system code -->
   
+    <script src=""></script>
+<script src=''></script>
+  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -273,24 +276,26 @@ crossorigin="anonymous"></script>
 
 
 
-    <!-- 来必力City版安装代码 -->
-
-<script type="text/javascript">
-(function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-
-    if (typeof LivereTower === 'function') { return; }
-
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-
-    e.parentNode.insertBefore(j, e);
-})(document, 'script');
+    
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz',
+        appKey: 'EJjXthAbB5sJV4MJfNbRcHYq',
+        placeholder: 'What's your opinion🎈',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'zh-cn'
+    });
 </script>
-<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
-</div>
-<!-- City版安装代码已完成 -->
+
+
+
 
 
 
