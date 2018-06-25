@@ -10,7 +10,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   
-      <title>BabyLearnGNS3 - 式</title>
+      <title>BabyLearnNetwork - 式</title>
   
 
   
@@ -110,7 +110,7 @@ crossorigin="anonymous"></script>
 		
 
 
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gns3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#route"><span class="toc-number">2.1.</span> <span class="toc-text">Route</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#do"><span class="toc-number">2.1.1.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-on-a-stick"><span class="toc-number">2.4.</span> <span class="toc-text">Router On a Stick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.5.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.5.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.5.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error"><span class="toc-number">2.6.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gns3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#router"><span class="toc-number">2.1.</span> <span class="toc-text">Router</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#router-as-pc"><span class="toc-number">2.1.1.</span> <span class="toc-text">Router as Pc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static-route"><span class="toc-number">2.1.2.</span> <span class="toc-text">Static Route</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf"><span class="toc-number">2.1.3.</span> <span class="toc-text">OSPF</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v3"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-on-a-stick"><span class="toc-number">2.4.</span> <span class="toc-text">Router On a Stick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.5.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.5.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.5.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error"><span class="toc-number">2.6.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -222,14 +222,14 @@ crossorigin="anonymous"></script>
 
 
 
-<article class="article" id="/2018/06/19/BabyLearnGNS3/" data-name='BabyLearnGNS3' data-version="">
+<article class="article" id="/2018/06/19/BabyLearnNetwork/" data-name='BabyLearnNetwork' data-version="">
 
     <!-- Title -->
     <div class='article-header'>
          
          <h1 class='article-title'>
-            <a href="/2018/06/19/BabyLearnGNS3/">
-                BabyLearnGNS3
+            <a href="/2018/06/19/BabyLearnNetwork/">
+                BabyLearnNetwork
             </a>
         </h1>
         <!-- TODO: support nested categories,display them nicely -->
@@ -275,7 +275,7 @@ crossorigin="anonymous"></script>
 		
 	
 		
-			<label class='tag-2'><a href="/tags/GNS3/">Gns3</a></label>
+			<label class='tag-2'><a href="/tags/Cisco/">Cisco</a></label>
 		
 	
 	</div>
@@ -338,13 +338,12 @@ crossorigin="anonymous"></script>
 Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。
  
 GNS3
-Route
-Do
+Router
+Router as Pc
 
 拖拽Router,配置接口。Route每个接口应不相同。
 配置Router Gateway的ip：进入Config模式，ip add ipAddress ipMask，再输入No shutdown启用Ip。
-配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip address。
-Router...</p>
+配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip...</p>
 </div>
         </div> -->
     </div>
@@ -359,7 +358,7 @@ Router...</p>
         
 
 
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gns3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#route"><span class="toc-number">2.1.</span> <span class="toc-text">Route</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#do"><span class="toc-number">2.1.1.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-on-a-stick"><span class="toc-number">2.4.</span> <span class="toc-text">Router On a Stick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.5.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.5.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.5.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error"><span class="toc-number">2.6.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gns3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#router"><span class="toc-number">2.1.</span> <span class="toc-text">Router</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#router-as-pc"><span class="toc-number">2.1.1.</span> <span class="toc-text">Router as Pc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static-route"><span class="toc-number">2.1.2.</span> <span class="toc-text">Static Route</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf"><span class="toc-number">2.1.3.</span> <span class="toc-text">OSPF</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v3"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-on-a-stick"><span class="toc-number">2.4.</span> <span class="toc-text">Router On a Stick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.5.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.5.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.5.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error"><span class="toc-number">2.6.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -370,16 +369,38 @@ Router...</p>
 <p>Win10更新崩坏，电脑格式化，github仓库被删除，博客全部丢失，上一个星期的日子，还能再惨点嘛……实训第二阶段，开始学习网络配置，借此机会补补博客。</p>
 <a id="more"></a> 
 <h2 id="gns3">GNS3</h2>
-<h3 id="route">Route</h3>
-<h4 id="do">Do</h4>
+<h3 id="router">Router</h3>
+<h4 id="router-as-pc">Router as Pc</h4>
 <ol>
 <li>拖拽Router,配置接口。Route每个接口应不相同。</li>
 <li>配置Router Gateway的ip：进入Config模式，ip add ipAddress ipMask，再输入No shutdown启用Ip。</li>
 <li>配置Router Pc，由于是借助Router模拟Pc，进入Config模式，关闭路由功能Ip no routing。再配置Ip address。</li>
 <li>Router Pc间Ping测试。</li>
 </ol>
+<h4 id="static-route">Static Route</h4>
+<blockquote>
+<p><a href="http://blog.51cto.com/shenghao/1322802" target="_blank" rel="noopener">递归路由</a></p>
+</blockquote>
+<h4 id="ospf">OSPF</h4>
+<h5 id="concept">Concept</h5>
+<blockquote>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%94%BE%E5%BC%8F%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%BC%98%E5%85%88" target="_blank" rel="noopener">开放式最短路径优先</a></p>
+</blockquote>
+<ol>
+<li>动态路由选路，采用&quot;代价&quot;度量（代价和100相除，标准化）。</li>
+<li>因为更新LSA的方式，OSPF能获得全局最优路径。RIP协议类比问路，只能相信路人的指向是最优的，可能次优；而OSPF协议类比地图，能规划出全局最优路径。</li>
+<li>OSPF的“破环”背景：所有区域和主干区域Area0相接；所有区域间通信，必须经由Area0。</li>
+<li>OSPF机制：建立邻居关系；同步链路状态数据库；计算最优路径。</li>
+</ol>
+<h5 id="do">Do</h5>
+<p><img src="https://i.loli.net/2018/06/25/5b30ac8dad2fb.png" alt="ospf.PNG"></p>
+<ol>
+<li>拖拽路由，配置Ip。添加本地循环(int lo 1)，提供虚拟接口。</li>
+<li>设置OSPF进程router ospf 1。</li>
+<li>宣告哪些接口开启OSPF。最简单：network 0.0.0.0 0.0.0.0 area 0,本设备所有接口开启OSPF，处于Area0。第二：network 12.1.1.0 0.0.0.255 a 0，其中0.0.0.255是反掩码（0要求精确匹配），同时强调网关（此处是12.1.1.0）可与本设备接口网关不一致，只需宣告网关能包含本设备接口网关即可。</li>
+</ol>
 <h3 id="vlan">Vlan</h3>
-<h4 id="concept">Concept</h4>
+<h4 id="concept-v2">Concept</h4>
 <blockquote>
 <p><a href="https://wizardforcel.gitbooks.io/network-basic/content/2.html" target="_blank" rel="noopener">Vlan介绍</a></p>
 </blockquote>
@@ -393,7 +414,7 @@ Router...</p>
 <li>Vpcs间的ping测试。</li>
 </ol>
 <h3 id="vtp">Vtp</h3>
-<h4 id="concept-v2">Concept</h4>
+<h4 id="concept-v3">Concept</h4>
 <blockquote>
 <p><a href="https://www.jannet.hk/zh-Hans/post/vlan-trunking-protocol-vtp/" target="_blank" rel="noopener">Vtp介绍</a></p>
 </blockquote>
@@ -429,6 +450,7 @@ Router...</p>
 <li>现象：不能自动补全，有<code>^</code>报错提醒。可能原因：是否进错模式，是普通模式，还是特权模式，还是配置模式等；是接口，设备本身的配置错误？比如fastethernet0模块不能适用于数据链路层。</li>
 <li>现象：远程登录时，目标主机无相应。可取做法：目标主机得先login，然后登陆主机telenet 才能得到目标主机响应。</li>
 <li>现象：接口绑定增加带宽，某接口显示Down。背景：设备已在工作，此时再添加设备间的新接口连线。例如再添加Trunk，和已有Trunk绑定增加带宽。可取做法：组成新添加Trunk的接口得Shutdown，再No shutdown，把物理和协议状态都开启。</li>
+<li>配置Ip后，得手动no shutdown，同时启用物理，逻辑状态。</li>
 </ol>
 
     
@@ -503,7 +525,7 @@ Router...</p>
 		
 
 
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gns3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#route"><span class="toc-number">2.1.</span> <span class="toc-text">Route</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#do"><span class="toc-number">2.1.1.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-on-a-stick"><span class="toc-number">2.4.</span> <span class="toc-text">Router On a Stick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.5.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.5.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.5.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error"><span class="toc-number">2.6.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">BackGround</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gns3"><span class="toc-number">2.</span> <span class="toc-text">GNS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#router"><span class="toc-number">2.1.</span> <span class="toc-text">Router</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#router-as-pc"><span class="toc-number">2.1.1.</span> <span class="toc-text">Router as Pc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static-route"><span class="toc-number">2.1.2.</span> <span class="toc-text">Static Route</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf"><span class="toc-number">2.1.3.</span> <span class="toc-text">OSPF</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v3"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#router-on-a-stick"><span class="toc-number">2.4.</span> <span class="toc-text">Router On a Stick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.5.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.5.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.5.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#error"><span class="toc-number">2.6.</span> <span class="toc-text">Error</span></a></li></ol></li></ol>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -612,7 +634,7 @@ Router...</p>
   loadjs(['', '', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_9a17d654366468b5b9a87cefa63299ead4fb8061ab8db9122955477d607b3e58').update('hashit_4f0ae7fe21cdbb706732251ee1fa348a5b183f22ea9f74ad117f22b31ad29c24', function(){});
+    new Postv2('hashit_42ba3db6e467da3e13abd691f3bb710a0b141840fd87d3abda7491a5fa6a4e0e').update('hashit_66660da3efb40404b0b852fcb13c043252a0baca374544b1550e89dc3eac8e19', function(){});
   });
   
 </script>
@@ -628,14 +650,14 @@ Router...</p>
     
     LeanCloud.init('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
     var leanCloud = LeanCloud.getInstance();
-    leanCloud.addVisitRecord('/2018/06/19/BabyLearnGNS3/', user_ip);
-    leanCloud.fetchCommentCount('/2018/06/19/BabyLearnGNS3/');
-    leanCloud.fetchVisitCount('/2018/06/19/BabyLearnGNS3/');
-    leanCloud.getCommentCount('/2018/06/19/BabyLearnGNS3/', function(count){
+    leanCloud.addVisitRecord('/2018/06/19/BabyLearnNetwork/', user_ip);
+    leanCloud.fetchCommentCount('/2018/06/19/BabyLearnNetwork/');
+    leanCloud.fetchVisitCount('/2018/06/19/BabyLearnNetwork/');
+    leanCloud.getCommentCount('/2018/06/19/BabyLearnNetwork/', function(count){
         var el = document.querySelector('#article-comment-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getVisitCount('/2018/06/19/BabyLearnGNS3/', function(count){
+    leanCloud.getVisitCount('/2018/06/19/BabyLearnNetwork/', function(count){
         var el = document.querySelector('#article-visit-count');
         if(el) el.innerHTML = count;
     });
