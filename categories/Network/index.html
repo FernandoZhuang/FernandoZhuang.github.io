@@ -394,7 +394,7 @@ crossorigin="anonymous"></script>
           
           // show/hide post unread badage
           var postLinks = document.querySelectorAll('#hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5 .Card-title a, #hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5 .Card-excerpt a, #hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5 .Card-figure a');
-          new Postv2('hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5').showUnreadNotification('hashit_08b1727766735e4bcdc4bb9c18d44061c4bcaea3b8e2d2b882a8143271928604', function(){
+          new Postv2('hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5').showUnreadNotification('hashit_bbb8aedc3984382d83e14e273b896cd211388d2b1379b27849cae2af589a6cc6', function(){
             console.log('show badge for 2018-06/BabyLearnNetwork/ : hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5');
             var postBadge = document.querySelector('#hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5 mark.Card-badge');
             $(postBadge).fadeIn();
@@ -406,7 +406,7 @@ crossorigin="anonymous"></script>
           // update cookie upon click the post and hide badge immediately
           for(var i = 0;i < postLinks.length; i++){
             postLinks[i].onclick = function(){
-              new Postv2('hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5').update('hashit_08b1727766735e4bcdc4bb9c18d44061c4bcaea3b8e2d2b882a8143271928604', function(){
+              new Postv2('hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5').update('hashit_bbb8aedc3984382d83e14e273b896cd211388d2b1379b27849cae2af589a6cc6', function(){
                 console.log('called');
                 var postBadge = document.querySelector('#hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5 mark.Card-badge');
                 $(postBadge).fadeOut();
