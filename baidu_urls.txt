@@ -1,2 +1,2 @@
-0xshare.me/2018-06/BabyLearnXss/
-0xshare.me/2018-06/BabyLearnNetwork/
+0xshare.me/2018/BabyLearnXss/
+0xshare.me/2018/BabyLearnNetwork/

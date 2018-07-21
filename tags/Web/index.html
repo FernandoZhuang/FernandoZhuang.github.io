@@ -177,12 +177,12 @@ crossorigin="anonymous"></script>
 
 
 
-<div class='Card-archive' id='hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db' data-name='BabyLearnXss' data-version=''>
+<div class='Card-archive' id='hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b' data-name='BabyLearnXss' data-version=''>
 	<mark class='Card-badge'></mark>
 	<div class="Card-body">
 		<h3 class='Card-title'>
 			
-				<a href="/2018-06/BabyLearnXss/">
+				<a href="/2018/BabyLearnXss/">
 			
 			BabyLearnXss</a>
 		</h3>
@@ -219,7 +219,7 @@ crossorigin="anonymous"></script>
 					
 					
 					<li>
-						<a href="/2018-06/BabyLearnXss/#article-comment">
+						<a href="/2018/BabyLearnXss/#article-comment">
 							<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
 						</a>
 					</li>
@@ -395,22 +395,22 @@ crossorigin="anonymous"></script>
           
           
           // show/hide post unread badage
-          var postLinks = document.querySelectorAll('#hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db .Card-title a, #hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db .Card-excerpt a, #hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db .Card-figure a');
-          new Postv2('hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db').showUnreadNotification('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){
-            console.log('show badge for 2018-06/BabyLearnXss/ : hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db');
-            var postBadge = document.querySelector('#hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db mark.Card-badge');
+          var postLinks = document.querySelectorAll('#hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b .Card-title a, #hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b .Card-excerpt a, #hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b .Card-figure a');
+          new Postv2('hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b').showUnreadNotification('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){
+            console.log('show badge for 2018/BabyLearnXss/ : hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b');
+            var postBadge = document.querySelector('#hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b mark.Card-badge');
             $(postBadge).fadeIn();
           }, function(){
-            console.log('hide badge for 2018-06/BabyLearnXss/ : hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db');
-            var postBadge = document.querySelector('#hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db mark.Card-badge');
+            console.log('hide badge for 2018/BabyLearnXss/ : hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b');
+            var postBadge = document.querySelector('#hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b mark.Card-badge');
             $(postBadge).fadeOut();
           }); 
           // update cookie upon click the post and hide badge immediately
           for(var i = 0;i < postLinks.length; i++){
             postLinks[i].onclick = function(){
-              new Postv2('hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db').update('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){
+              new Postv2('hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b').update('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){
                 console.log('called');
-                var postBadge = document.querySelector('#hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db mark.Card-badge');
+                var postBadge = document.querySelector('#hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b mark.Card-badge');
                 $(postBadge).fadeOut();
               });
             }
@@ -435,14 +435,14 @@ crossorigin="anonymous"></script>
           
           
           // start caching post visit and comment counts
-          leanCloud.fetchCommentCount('/2018-06/BabyLearnXss/');
-          leanCloud.fetchVisitCount('/2018-06/BabyLearnXss/');
-          leanCloud.getCommentCount('/2018-06/BabyLearnXss/', function(count){
-              var el = document.querySelector('#hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db .card-comment-count');
+          leanCloud.fetchCommentCount('/2018/BabyLearnXss/');
+          leanCloud.fetchVisitCount('/2018/BabyLearnXss/');
+          leanCloud.getCommentCount('/2018/BabyLearnXss/', function(count){
+              var el = document.querySelector('#hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b .card-comment-count');
               if(el) el.innerHTML = count;
           });
-          leanCloud.getVisitCount('/2018-06/BabyLearnXss/', function(count){
-              var el = document.querySelector('#hashit_e4fc1beebf793720cdc60193e3b9155b974de03c88392bf58fc7182515f496db .card-visit-count');
+          leanCloud.getVisitCount('/2018/BabyLearnXss/', function(count){
+              var el = document.querySelector('#hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b .card-visit-count');
               if(el) el.innerHTML = count;
           });
         
