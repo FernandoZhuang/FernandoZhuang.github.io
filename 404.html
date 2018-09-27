@@ -50,7 +50,7 @@ crossorigin="anonymous"></script>
  
 
   <!-- load font awesome 5 -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -131,6 +131,7 @@ crossorigin="anonymous"></script>
 				</a>
 		</div>
 		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
 		
 		
 		<div class='nav-more-item'>
@@ -192,9 +193,8 @@ crossorigin="anonymous"></script>
 <footer id='footer'>
     <div class='footer-copyright'>
         <div>
-			
-            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018 Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
-            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
+            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.1.1-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
         </div>
     </div>
     
@@ -203,6 +203,10 @@ crossorigin="anonymous"></script>
             
                 
                     <div class='footer-social-item'><a href='https://github.com/FernandoZhuang' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+                
+                    <div class='footer-social-item'><a href='https://aizhengpeng.cn' target='_blank' ><i class="fab fa-blogger-b fa-2x" aria-hidden="true"></i></a></div>
                 
             
         
@@ -245,6 +249,7 @@ crossorigin="anonymous"></script>
 				</a>
 		</div>
 		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
 		
 		
 		<div class='nav-more-item'>
@@ -321,10 +326,13 @@ crossorigin="anonymous"></script>
 </script>
 
 
-    <script type="text/javascript" src="https://l2.io/ip.js?var=user_ip"></script>
+    
 <script type='text/javascript'>
   
 </script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 
 
 <!-- <script src="/js/post.js"></script> -->
@@ -339,7 +347,6 @@ changeLayoutOnTouchScreen();
 
 // 
 </script>
-
 
 
 <!-- End Document

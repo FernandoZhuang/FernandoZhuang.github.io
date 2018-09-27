@@ -50,7 +50,7 @@ crossorigin="anonymous"></script>
  
 
   <!-- load font awesome 5 -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -110,7 +110,10 @@ crossorigin="anonymous"></script>
 		
 
 
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reflected-cross-site-scripting"><span class="toc-number">1.</span> <span class="toc-text">Reflected Cross-Site Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#persistent-cross-site-scripting"><span class="toc-number">2.</span> <span class="toc-text">Persistent Cross-SIte Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom"><span class="toc-number">3.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+</div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -142,6 +145,7 @@ crossorigin="anonymous"></script>
 				</a>
 		</div>
 		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
 		
 		
 		<div class='nav-more-item'>
@@ -250,8 +254,9 @@ crossorigin="anonymous"></script>
     <ul>
             <li><i class='fa fa-calendar'></i> 2018年06月21日</li>
             
-            <li><i class='fa fa-comments'></i> <a href='#article-comment'><span id='article-comment-count'>0</span></a></li>
+            <li class='comment-button'><a href='#article-comment'><i class='fa fa-comments'></i> <span id='article-comment-count'>0</span></a></li>
             <li><i class="fa fa-eye"></i> <span id='article-visit-count'>0</span></li>
+            <li class='thumb-up-button' id='thumb-up-button'><i class="far fa-thumbs-up fa-lg" id='thumb-up-icon'></i> <span id='article-thumbup-count'>0</span></li>
             
             <li><i class="fa fa-user"></i> FernandoZhuang</li>
             <li><i class="fas fa-copyright"></i>
@@ -358,10 +363,14 @@ crossorigin="anonymous"></script>
     <!-- Content -->
     <!-- TODO: support table of content -->
     <div class="article-toc" id='article-toc'>
+    
         
 
 
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reflected-cross-site-scripting"><span class="toc-number">1.</span> <span class="toc-text">Reflected Cross-Site Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#persistent-cross-site-scripting"><span class="toc-number">2.</span> <span class="toc-text">Persistent Cross-SIte Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom"><span class="toc-number">3.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+</div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -455,9 +464,8 @@ crossorigin="anonymous"></script>
 <footer id='footer'>
     <div class='footer-copyright'>
         <div>
-			
-            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018 Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
-            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
+            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.1.1-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
         </div>
     </div>
     
@@ -466,6 +474,10 @@ crossorigin="anonymous"></script>
             
                 
                     <div class='footer-social-item'><a href='https://github.com/FernandoZhuang' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+                
+                    <div class='footer-social-item'><a href='https://aizhengpeng.cn' target='_blank' ><i class="fab fa-blogger-b fa-2x" aria-hidden="true"></i></a></div>
                 
             
         
@@ -487,7 +499,10 @@ crossorigin="anonymous"></script>
 		
 
 
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#reflected-cross-site-scripting"><span class="toc-number">1.</span> <span class="toc-text">Reflected Cross-Site Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#persistent-cross-site-scripting"><span class="toc-number">2.</span> <span class="toc-text">Persistent Cross-SIte Scripting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dom"><span class="toc-number">3.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+</div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -519,6 +534,7 @@ crossorigin="anonymous"></script>
 				</a>
 		</div>
 		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
 		
 		
 		<div class='nav-more-item'>
@@ -596,25 +612,46 @@ crossorigin="anonymous"></script>
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b').update('hashit_9513a3adc786bd3daca9b2149fba60c2d5bb857c905fc6d0ed7a09a943d09bb4', function(){});
+    new Postv2('hashit_a3236610b79a80644fbe80452d089dd10e787ddebe26b3ed6a31058588e7e84b').update('hashit_41301fb1c1a3333cf0cd154859321818ca67f5311cbe8a4297db0b60ae34258b', function(){});
   });
   
 </script>
 
 
-    <script type="text/javascript" src="https://l2.io/ip.js?var=user_ip"></script>
+    
 <script type='text/javascript'>
   
   // update cookie if this page is opened (directly)
+  function getIP(json) {
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
   loadjs.ready('post-visit-comment-count', function(){
     
     
     LeanCloud.init('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
     var leanCloud = LeanCloud.getInstance();
-    leanCloud.addVisitRecord('/2018/BabyLearnXss/', user_ip);
+    leanCloud.fetchIsThumbUp('/2018/BabyLearnXss/', json.ip);
+    document.getElementById('thumb-up-button').addEventListener('click', function(e){
+      leanCloud.isThumbUp('/2018/BabyLearnXss/', function(isThumbUp){
+        console.log('is thumb up:' + isThumbUp);
+        if(isThumbUp){
+          leanCloud.removeThumbUpRecord('/2018/BabyLearnXss/', json.ip);
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+          
+        }else{
+          leanCloud.addThumbUpRecord('/2018/BabyLearnXss/', json.ip);
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }
+        leanCloud.getThumbUpCount('/2018/BabyLearnXss/', function(count){
+            console.log('thumb up count: ' + count)
+            var el = document.getElementById('article-thumbup-count');
+            if(el) el.innerHTML = count;
+        });
+      });
+    });
+    leanCloud.addVisitRecord('/2018/BabyLearnXss/', json.ip);
     leanCloud.fetchCommentCount('/2018/BabyLearnXss/');
     leanCloud.fetchVisitCount('/2018/BabyLearnXss/');
+    leanCloud.fetchThumbUpCount('/2018/BabyLearnXss/');
     leanCloud.getCommentCount('/2018/BabyLearnXss/', function(count){
         var el = document.querySelector('#article-comment-count');
         if(el) el.innerHTML = count;
@@ -623,9 +660,25 @@ crossorigin="anonymous"></script>
         var el = document.querySelector('#article-visit-count');
         if(el) el.innerHTML = count;
     });
+    leanCloud.getThumbUpCount('/2018/BabyLearnXss/', function(count){
+        var el = document.getElementById('article-thumbup-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.isThumbUp('/2018/BabyLearnXss/', function(isThumbUp){
+        console.log('init thumb up:' + isThumbUp);
+        if(isThumbUp){
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }else{
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+        }
+    });
   });
+  }
   
 </script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 
 
 <!-- <script src="/js/post.js"></script> -->
@@ -650,7 +703,6 @@ changeLayoutOnTouchScreen();
 
 // 
 </script>
-
 
 
 <!-- End Document
