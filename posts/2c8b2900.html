@@ -122,7 +122,7 @@ crossorigin="anonymous"></script>
 	
 	<div class='nav-item' id='nav-item-archive'>
 		
-				<div class='nav-icon active_dot'>
+				<div class='nav-icon'>
 				
 			<a href="/archives/" title='归档'>
 			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
@@ -150,16 +150,16 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Security/">
-						<span>Security</span>
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
 					</a>
 				</div>
 		</div>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Network/">
-						<span>Network</span>
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
 					</a>
 				</div>
 		</div>
@@ -226,13 +226,13 @@ crossorigin="anonymous"></script>
 
 
 
-<article class="article" id="/archives/2c8b2900.html" data-name='BabyLearnXss' data-version="">
+<article class="article" id="/posts/2c8b2900.html" data-name='BabyLearnXss' data-version="">
 
     <!-- Title -->
     <div class='article-header'>
          
          <h1 class='article-title'>
-            <a href="/archives/2c8b2900.html">
+            <a href="/posts/2c8b2900.html">
                 BabyLearnXss
             </a>
         </h1>
@@ -403,11 +403,11 @@ crossorigin="anonymous"></script>
    <dt>Javascript</dt>
    <dd>
 1. 闭合引号，基础弹框。
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点:</span></span><br><span class="line"><span class="comment">          &lt;label&gt;&lt;h4&gt;</span></span><br><span class="line"><span class="comment">          &lt;script type="text/javascript"&gt;</span></span><br><span class="line"><span class="comment">              var you = 'iloveyou';</span></span><br><span class="line"><span class="comment">              document.write('2333''+','+you);</span></span><br><span class="line"><span class="comment">          &lt;/script&gt;</span></span><br><span class="line"><span class="comment">          &lt;/h4&gt;&lt;/label&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: 233');alert(1);//'+','+you); --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">              var you = 'iloveyou';</span></span><br><span class="line"><span class="undefined">              document.write('233');alert(1);//'+','+you);</span></span><br><span class="line"><span class="undefined">          </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点:</span></span><br><span class="line"><span class="comment">          &lt;label&gt;&lt;h4&gt;</span></span><br><span class="line"><span class="comment">          &lt;script type="text/javascript"&gt;</span></span><br><span class="line"><span class="comment">              var you = 'iloveyou';</span></span><br><span class="line"><span class="comment">              document.write('2333''+','+you);</span></span><br><span class="line"><span class="comment">          &lt;/script&gt;</span></span><br><span class="line"><span class="comment">          &lt;/h4&gt;&lt;/label&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: 233');alert(1);//'+','+you); --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">              <span class="keyword">var</span> you = <span class="string">'iloveyou'</span>;</span></span><br><span class="line"><span class="javascript">              <span class="built_in">document</span>.write(<span class="string">'233'</span>);alert(<span class="number">1</span>);<span class="comment">//'+','+you);</span></span></span><br><span class="line"><span class="undefined">          </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>引号被过滤</li>
 </ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点:  输入的是2333"alert(1)</span></span><br><span class="line"><span class="comment">&lt;label&gt;&lt;h4 id="twoH4"&gt;</span></span><br><span class="line"><span class="comment">  &lt;script type="text/javascript"&gt;</span></span><br><span class="line"><span class="comment">  var two = document.getElementById('twoH4');</span></span><br><span class="line"><span class="comment">  var two_value = "2333alert(1)";</span></span><br><span class="line"><span class="comment">  two.innerHTML=two_value;</span></span><br><span class="line"><span class="comment">  &lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;/h4&gt;&lt;/label&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: &lt;/script&gt; &lt;script&gt;alert(1)&lt;/script&gt;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  var you = 'iloveyou';</span></span><br><span class="line"><span class="undefined">  document.write('</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">alert(1)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>'+','+you);</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Vulnerbility注入点:  输入的是2333"alert(1)</span></span><br><span class="line"><span class="comment">&lt;label&gt;&lt;h4 id="twoH4"&gt;</span></span><br><span class="line"><span class="comment">  &lt;script type="text/javascript"&gt;</span></span><br><span class="line"><span class="comment">  var two = document.getElementById('twoH4');</span></span><br><span class="line"><span class="comment">  var two_value = "2333alert(1)";</span></span><br><span class="line"><span class="comment">  two.innerHTML=two_value;</span></span><br><span class="line"><span class="comment">  &lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;/h4&gt;&lt;/label&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Inject输入: &lt;/script&gt; &lt;script&gt;alert(1)&lt;/script&gt;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">var</span> you = <span class="string">'iloveyou'</span>;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="string">'</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">alert(1)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>'+','+you);</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
    </dd>
 </dl>
 <h2 id="persistent-cross-site-scripting">Persistent Cross-SIte Scripting</h2>
@@ -511,7 +511,7 @@ crossorigin="anonymous"></script>
 	
 	<div class='nav-item' id='nav-item-archive'>
 		
-				<div class='nav-icon active_dot'>
+				<div class='nav-icon'>
 				
 			<a href="/archives/" title='归档'>
 			<img src="/images/icons/colorful-outlined/archive.svg" alt="">
@@ -539,16 +539,16 @@ crossorigin="anonymous"></script>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Security/">
-						<span>Security</span>
+					<a class='nav-link' href="/categories/Network/">
+						<span>Network</span>
 					</a>
 				</div>
 		</div>
 		
 		<div class='nav-more-item'>
 				<div class="nav-name">
-					<a class='nav-link' href="/categories/Network/">
-						<span>Network</span>
+					<a class='nav-link' href="/categories/Security/">
+						<span>Security</span>
 					</a>
 				</div>
 		</div>
@@ -612,7 +612,7 @@ crossorigin="anonymous"></script>
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_0c8729c1551bf2b29fbc2f69c36593ed2f242ab3bb689e0c961a302a26a4b295').update('hashit_41301fb1c1a3333cf0cd154859321818ca67f5311cbe8a4297db0b60ae34258b', function(){});
+    new Postv2('hashit_3a5e67d7d3a4e7784c0e25588127a26e1994b18d048448a0ef735f0dd51612f0').update('hashit_41301fb1c1a3333cf0cd154859321818ca67f5311cbe8a4297db0b60ae34258b', function(){});
   });
   
 </script>
@@ -629,42 +629,42 @@ crossorigin="anonymous"></script>
     
     LeanCloud.init('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
     var leanCloud = LeanCloud.getInstance();
-    leanCloud.fetchIsThumbUp('/archives/2c8b2900.html', json.ip);
+    leanCloud.fetchIsThumbUp('/posts/2c8b2900.html', json.ip);
     document.getElementById('thumb-up-button').addEventListener('click', function(e){
-      leanCloud.isThumbUp('/archives/2c8b2900.html', function(isThumbUp){
+      leanCloud.isThumbUp('/posts/2c8b2900.html', function(isThumbUp){
         console.log('is thumb up:' + isThumbUp);
         if(isThumbUp){
-          leanCloud.removeThumbUpRecord('/archives/2c8b2900.html', json.ip);
+          leanCloud.removeThumbUpRecord('/posts/2c8b2900.html', json.ip);
           document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
           
         }else{
-          leanCloud.addThumbUpRecord('/archives/2c8b2900.html', json.ip);
+          leanCloud.addThumbUpRecord('/posts/2c8b2900.html', json.ip);
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
         }
-        leanCloud.getThumbUpCount('/archives/2c8b2900.html', function(count){
+        leanCloud.getThumbUpCount('/posts/2c8b2900.html', function(count){
             console.log('thumb up count: ' + count)
             var el = document.getElementById('article-thumbup-count');
             if(el) el.innerHTML = count;
         });
       });
     });
-    leanCloud.addVisitRecord('/archives/2c8b2900.html', json.ip);
-    leanCloud.fetchCommentCount('/archives/2c8b2900.html');
-    leanCloud.fetchVisitCount('/archives/2c8b2900.html');
-    leanCloud.fetchThumbUpCount('/archives/2c8b2900.html');
-    leanCloud.getCommentCount('/archives/2c8b2900.html', function(count){
+    leanCloud.addVisitRecord('/posts/2c8b2900.html', json.ip);
+    leanCloud.fetchCommentCount('/posts/2c8b2900.html');
+    leanCloud.fetchVisitCount('/posts/2c8b2900.html');
+    leanCloud.fetchThumbUpCount('/posts/2c8b2900.html');
+    leanCloud.getCommentCount('/posts/2c8b2900.html', function(count){
         var el = document.querySelector('#article-comment-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getVisitCount('/archives/2c8b2900.html', function(count){
+    leanCloud.getVisitCount('/posts/2c8b2900.html', function(count){
         var el = document.querySelector('#article-visit-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getThumbUpCount('/archives/2c8b2900.html', function(count){
+    leanCloud.getThumbUpCount('/posts/2c8b2900.html', function(count){
         var el = document.getElementById('article-thumbup-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.isThumbUp('/archives/2c8b2900.html', function(isThumbUp){
+    leanCloud.isThumbUp('/posts/2c8b2900.html', function(isThumbUp){
         console.log('init thumb up:' + isThumbUp);
         if(isThumbUp){
           document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";

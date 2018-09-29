@@ -50,7 +50,7 @@ crossorigin="anonymous"></script>
  
 
   <!-- load font awesome 5 -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -110,7 +110,10 @@ crossorigin="anonymous"></script>
 		
 
 
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network"><span class="toc-number">2.</span> <span class="toc-text">Network</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#router"><span class="toc-number">2.1.</span> <span class="toc-text">Router</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#router-as-pc"><span class="toc-number">2.1.1.</span> <span class="toc-text">Router as Pc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static-route"><span class="toc-number">2.1.2.</span> <span class="toc-text">Static Route</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf"><span class="toc-number">2.1.3.</span> <span class="toc-text">Ospf</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf-rip"><span class="toc-number">2.1.4.</span> <span class="toc-text">Ospf &amp; Rip</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.1.4.1.</span> <span class="toc-text">Concept</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v3"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v4"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.4.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.4.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.4.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#firewall"><span class="toc-number">2.5.</span> <span class="toc-text">Firewall</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v5"><span class="toc-number">2.5.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v4"><span class="toc-number">2.5.2.</span> <span class="toc-text">Do</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error"><span class="toc-number">3.</span> <span class="toc-text">Error</span></a></li></ol>
+</div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -142,6 +145,7 @@ crossorigin="anonymous"></script>
 				</a>
 		</div>
 		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
 		
 		
 		<div class='nav-more-item'>
@@ -222,13 +226,13 @@ crossorigin="anonymous"></script>
 
 
 
-<article class="article" id="/2018-06/BabyLearnNetwork/" data-name='BabyLearnNetwork' data-version="">
+<article class="article" id="/posts/eddcacee.html" data-name='BabyLearnNetwork' data-version="">
 
     <!-- Title -->
     <div class='article-header'>
          
          <h1 class='article-title'>
-            <a href="/2018-06/BabyLearnNetwork/">
+            <a href="/posts/eddcacee.html">
                 BabyLearnNetwork
             </a>
         </h1>
@@ -250,8 +254,9 @@ crossorigin="anonymous"></script>
     <ul>
             <li><i class='fa fa-calendar'></i> 2018年06月19日</li>
             
-            <li><i class='fa fa-comments'></i> <a href='#article-comment'><span id='article-comment-count'>0</span></a></li>
+            <li class='comment-button'><a href='#article-comment'><i class='fa fa-comments'></i> <span id='article-comment-count'>0</span></a></li>
             <li><i class="fa fa-eye"></i> <span id='article-visit-count'>0</span></li>
+            <li class='thumb-up-button' id='thumb-up-button'><i class="far fa-thumbs-up fa-lg" id='thumb-up-icon'></i> <span id='article-thumbup-count'>0</span></li>
             
             <li><i class="fa fa-user"></i> FernandoZhuang</li>
             <li><i class="fas fa-copyright"></i>
@@ -356,10 +361,14 @@ Router as Pc
     <!-- Content -->
     <!-- TODO: support table of content -->
     <div class="article-toc" id='article-toc'>
+    
         
 
 
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network"><span class="toc-number">2.</span> <span class="toc-text">Network</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#router"><span class="toc-number">2.1.</span> <span class="toc-text">Router</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#router-as-pc"><span class="toc-number">2.1.1.</span> <span class="toc-text">Router as Pc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static-route"><span class="toc-number">2.1.2.</span> <span class="toc-text">Static Route</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf"><span class="toc-number">2.1.3.</span> <span class="toc-text">Ospf</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf-rip"><span class="toc-number">2.1.4.</span> <span class="toc-text">Ospf &amp; Rip</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.1.4.1.</span> <span class="toc-text">Concept</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v3"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v4"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.4.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.4.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.4.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#firewall"><span class="toc-number">2.5.</span> <span class="toc-text">Firewall</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v5"><span class="toc-number">2.5.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v4"><span class="toc-number">2.5.2.</span> <span class="toc-text">Do</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error"><span class="toc-number">3.</span> <span class="toc-text">Error</span></a></li></ol>
+</div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -554,9 +563,8 @@ Router as Pc
 <footer id='footer'>
     <div class='footer-copyright'>
         <div>
-			
-            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018 Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
-            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
+            <p> 版权所有 <a href="">FernandoZhuang </a> @ 2018Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+            <p>设计: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> 和 <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; 主题: <a href="https://qutang.github.io/cutie/">Cutie 2.1.1-Taurus</a> &bull; 由 <a href="http://hexo.io">Hexo.</a> 强力驱动</p>
         </div>
     </div>
     
@@ -565,6 +573,10 @@ Router as Pc
             
                 
                     <div class='footer-social-item'><a href='https://github.com/FernandoZhuang' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+                
+                    <div class='footer-social-item'><a href='https://aizhengpeng.cn' target='_blank' ><i class="fab fa-blogger-b fa-2x" aria-hidden="true"></i></a></div>
                 
             
         
@@ -586,7 +598,10 @@ Router as Pc
 		
 
 
+<div class='toc-container'>
+<i class="far fa-times-circle" id='toc-close' onclick='closeTOC(event);' ontouchstart='closeTOC(event);'></i>
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#background"><span class="toc-number">1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network"><span class="toc-number">2.</span> <span class="toc-text">Network</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#router"><span class="toc-number">2.1.</span> <span class="toc-text">Router</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#router-as-pc"><span class="toc-number">2.1.1.</span> <span class="toc-text">Router as Pc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static-route"><span class="toc-number">2.1.2.</span> <span class="toc-text">Static Route</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf"><span class="toc-number">2.1.3.</span> <span class="toc-text">Ospf</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ospf-rip"><span class="toc-number">2.1.4.</span> <span class="toc-text">Ospf &amp; Rip</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#concept-v2"><span class="toc-number">2.1.4.1.</span> <span class="toc-text">Concept</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlan"><span class="toc-number">2.2.</span> <span class="toc-text">Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v3"><span class="toc-number">2.2.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v2"><span class="toc-number">2.2.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtp"><span class="toc-number">2.3.</span> <span class="toc-text">Vtp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v4"><span class="toc-number">2.3.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v3"><span class="toc-number">2.3.2.</span> <span class="toc-text">Do</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cross-different-vlan"><span class="toc-number">2.4.</span> <span class="toc-text">Cross Different Vlan</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#single-l3-switch"><span class="toc-number">2.4.1.</span> <span class="toc-text">Single L3 Switch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#double-l3-switch"><span class="toc-number">2.4.2.</span> <span class="toc-text">Double L3 Switch</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#firewall"><span class="toc-number">2.5.</span> <span class="toc-text">Firewall</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#concept-v5"><span class="toc-number">2.5.1.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-v4"><span class="toc-number">2.5.2.</span> <span class="toc-text">Do</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error"><span class="toc-number">3.</span> <span class="toc-text">Error</span></a></li></ol>
+</div>
 <div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
     <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
@@ -618,6 +633,7 @@ Router as Pc
 				</a>
 		</div>
 		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
 		
 		
 		<div class='nav-more-item'>
@@ -695,36 +711,73 @@ Router as Pc
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
   loadjs.ready('post-version', function(){
     
-    new Postv2('hashit_f300536f291f1fd0760e094238a70294ddef486c69a55be9354302e8a641b4f5').update('hashit_bbb8aedc3984382d83e14e273b896cd211388d2b1379b27849cae2af589a6cc6', function(){});
+    new Postv2('hashit_9015a78f44ccb0b7dc22e7c8ffaf84ab2f7ac92426c850152719cfeb1837058e').update('hashit_f06916c3c41473fac01dc96cdf12f3d16ee7a14ef93a5f1e869abead38a34fa0', function(){});
   });
   
 </script>
 
 
-    <script type="text/javascript" src="https://l2.io/ip.js?var=user_ip"></script>
+    
 <script type='text/javascript'>
   
   // update cookie if this page is opened (directly)
+  function getIP(json) {
   loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
   loadjs.ready('post-visit-comment-count', function(){
     
     
     LeanCloud.init('VvvBbi55m3Wln1AMfxtb2Qyr-gzGzoHsz', 'EJjXthAbB5sJV4MJfNbRcHYq');
     var leanCloud = LeanCloud.getInstance();
-    leanCloud.addVisitRecord('/2018-06/BabyLearnNetwork/', user_ip);
-    leanCloud.fetchCommentCount('/2018-06/BabyLearnNetwork/');
-    leanCloud.fetchVisitCount('/2018-06/BabyLearnNetwork/');
-    leanCloud.getCommentCount('/2018-06/BabyLearnNetwork/', function(count){
+    leanCloud.fetchIsThumbUp('/posts/eddcacee.html', json.ip);
+    document.getElementById('thumb-up-button').addEventListener('click', function(e){
+      leanCloud.isThumbUp('/posts/eddcacee.html', function(isThumbUp){
+        console.log('is thumb up:' + isThumbUp);
+        if(isThumbUp){
+          leanCloud.removeThumbUpRecord('/posts/eddcacee.html', json.ip);
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+          
+        }else{
+          leanCloud.addThumbUpRecord('/posts/eddcacee.html', json.ip);
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }
+        leanCloud.getThumbUpCount('/posts/eddcacee.html', function(count){
+            console.log('thumb up count: ' + count)
+            var el = document.getElementById('article-thumbup-count');
+            if(el) el.innerHTML = count;
+        });
+      });
+    });
+    leanCloud.addVisitRecord('/posts/eddcacee.html', json.ip);
+    leanCloud.fetchCommentCount('/posts/eddcacee.html');
+    leanCloud.fetchVisitCount('/posts/eddcacee.html');
+    leanCloud.fetchThumbUpCount('/posts/eddcacee.html');
+    leanCloud.getCommentCount('/posts/eddcacee.html', function(count){
         var el = document.querySelector('#article-comment-count');
         if(el) el.innerHTML = count;
     });
-    leanCloud.getVisitCount('/2018-06/BabyLearnNetwork/', function(count){
+    leanCloud.getVisitCount('/posts/eddcacee.html', function(count){
         var el = document.querySelector('#article-visit-count');
         if(el) el.innerHTML = count;
     });
+    leanCloud.getThumbUpCount('/posts/eddcacee.html', function(count){
+        var el = document.getElementById('article-thumbup-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.isThumbUp('/posts/eddcacee.html', function(isThumbUp){
+        console.log('init thumb up:' + isThumbUp);
+        if(isThumbUp){
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }else{
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+        }
+    });
   });
+  }
   
 </script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 
 
 <!-- <script src="/js/post.js"></script> -->
@@ -749,7 +802,6 @@ changeLayoutOnTouchScreen();
 
 // 
 </script>
-
 
 
 <!-- End Document
